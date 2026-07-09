@@ -188,5 +188,5 @@ This project is intended for educational and portfolio purposes only.
 **Mahedi Shayek**
 
 * GitHub: https://github.com/mahedihshayek
-* LinkedIn: [www.linkedin.com/in/mahedi-shayek](http://www.linkedin.com/in/mahedi-shayek)
+* LinkedIn: https://www.linkedin.com/in/mahedihshayek/
 
