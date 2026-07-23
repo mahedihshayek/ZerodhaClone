@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 const cookieParser = require("cookie-parser");
 
@@ -21,6 +22,7 @@ const uri = process.env.MONGO_URL;
 const app = express();
 
 app.use(cors());
+
 app.use(bodyParser.json());
 app.use(cookieParser());
 
@@ -42,12 +44,12 @@ app.get('/allUsers', async (req, res) => {
 });
 
 
-app.post("/newOrder",async(req,res)=>{
+app.post("/newOrder", async (req, res) => {
     let newOrder = new OrdersModel({
-        name:req.body.name,
-        qty:req.body.qty,
-        price:req.body.price,
-        mode:req.body.mode,
+        name: req.body.name,
+        qty: req.body.qty,
+        price: req.body.price,
+        mode: req.body.mode,
     });
 
     newOrder.save();
@@ -89,6 +91,50 @@ app.post("/signup", async (req, res) => {
     }
 });
 
+app.post("/login", async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        const user = await UsersModel.findOne({ email });
+
+        if (!user) {
+            return res.status(400).json({
+                message: "Invalid email or password"
+            });
+        }
+        const userMatching = await bcrypt.compare(password, user.password);
+
+        if (!userMatching) {
+            return res.status(400).json({
+                message: "Invalid email or password"
+            });
+        }
+
+        const token = jwt.sign(
+            {
+                id: user._id,
+                email: user.email,
+                name: user.name
+            },
+            process.env.JWT_SECRET,
+            {
+                expiresIn: "1h"
+            }
+        );
+
+
+        res.status(200).json({
+            message: "Login successful"
+        });
+
+    } catch (error) {
+        console.log(error);
+
+        res.status(500).json({
+            message: "Login failed",
+            error: error.message
+        });
+    }
+});
 
 app.listen(PORT, () => {
     console.log("App started");

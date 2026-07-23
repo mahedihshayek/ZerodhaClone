@@ -46,7 +46,11 @@ function Universe() {
                     }} alt="" />
                     <p className='text-small text-muted'>Thematic investment platform</p>
                 </div>
-                <button className='p-2 btn btn-primary fs-5 mt-3 mb-3' style={{ width: "20%", margin: "0 auto" }}>Signup now</button>
+                {/* <button className='p-2 btn btn-primary fs-5 mt-3 mb-3' style={{ width: "20%", margin: "0 auto" }}>Signup now</button> */}
+                <button className='p-2 btn btn-primary fs-5' style={{ width: "20%", margin: "0 auto" }}>
+                    <a href="/signup" className="text-decoration-none text-white">
+                        Signup now
+                    </a></button>
             </div>
         </div>
     );

@@ -13,6 +13,11 @@ const Menu = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    window.location.href = "http://localhost:3000";
+  };
+
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
 
@@ -87,6 +92,21 @@ const Menu = () => {
               </p>
             </Link>
           </li>
+
+          <li>
+            <Link
+              style={{ textDecoration: "none" }}
+            >
+              <p
+                className={menuClass}
+                onClick={handleLogout}
+                style={{ cursor: "pointer" }}
+              >
+                Logout
+              </p>
+            </Link>
+          </li>
+
         </ul>
         <hr />
         <div className="profile" onClick={handleProfileClick}>
