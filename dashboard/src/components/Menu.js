@@ -13,10 +13,10 @@ const Menu = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
+const handleLogout = () => {
+    localStorage.removeItem("token");
     window.location.href = "http://localhost:3000";
-  };
+};
 
   const menuClass = "menu";
   const activeMenuClass = "menu selected";

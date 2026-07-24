@@ -26,8 +26,6 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-
-
 app.get('/allHoldings', async (req, res) => {
     let allHoldings = await HoldingsModel.find({});
     res.send(allHoldings);
@@ -121,9 +119,9 @@ app.post("/login", async (req, res) => {
             }
         );
 
-
         res.status(200).json({
-            message: "Login successful"
+            message: "Login successful",
+            token: token
         });
 
     } catch (error) {
