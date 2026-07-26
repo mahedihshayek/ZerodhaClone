@@ -11,28 +11,28 @@ function Footer() {
                     </div>
                     <div className='col' >
                         <p>Company</p>
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }}>About</a> <br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }} >Products</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }}>Pricing</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }}>Referral programme</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }}>Careers</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }}>Zerodha.Tech</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }}>Press & media</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }}>Zerodha cares</a>
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }}>About</a> <br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }} >Products</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }}>Pricing</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }}>Referral programme</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }}>Careers</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }}>Zerodha.Tech</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }}>Press & media</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }}>Zerodha cares</a>
                     </div>
                     <div className='col' >
                         <p>Support</p>
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }}>Contact</a> <br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }}>Support portal</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }}>Z-connect blog</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }}>List of charges</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }}>Download & resources</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }}>Contact</a> <br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }}>Support portal</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }}>Z-connect blog</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }}>List of charges</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }}>Download & resources</a><br />
                     </div>
                     <div className='col' >
                         <p>Account</p>
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }}>Open and account</a> <br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }}>Fund transfer</a><br />
-                        <a href='' className='text-muted' style={{ textDecoration: "none" }}>60 day challenge</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }}>Open and account</a> <br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }}>Fund transfer</a><br />
+                        <a href="/" className='text-muted' style={{ textDecoration: "none" }}>60 day challenge</a><br />
 
                     </div>
                 </div>

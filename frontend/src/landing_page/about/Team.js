@@ -24,7 +24,7 @@ function Team() {
                     </p><br />
 
                     <p>
-                        Connect on <a style={{ textDecoration: "none" }} href="">Homepage / </a> <a href="" style={{ textDecoration: "none" }}>TradingQNA /</a> <a href="" style={{ textDecoration: "none" }}>Twitter</a>
+                        Connect on <a style={{ textDecoration: "none" }} href="/">Homepage / </a> <a href="/" style={{ textDecoration: "none" }}>TradingQNA /</a> <a href="www.x.com" style={{ textDecoration: "none" }}>Twitter</a>
                     </p>
                 </div>
             </div>
