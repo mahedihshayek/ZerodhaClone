@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
@@ -22,6 +22,16 @@ const Menu = () => {
 
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
+
+  const [userName, setUserName] = useState("USER");
+
+  useEffect(() => {
+    const name = localStorage.getItem("userName");
+
+    if (name) {
+      setUserName(name);
+    }
+  }, []);
 
   return (
     <div className="menu-container">
@@ -96,22 +106,25 @@ const Menu = () => {
           </li>
 
           <li>
-            <li>
-              <p
-                className={menuClass}
-                onClick={handleLogout}
-                style={{ cursor: "pointer" }}
-              >
-                Logout
-              </p>
-            </li>
+            <p
+              className={menuClass}
+              onClick={handleLogout}
+              style={{ cursor: "pointer" }}
+            >
+              Logout
+            </p>
           </li>
 
         </ul>
         <hr />
         <div className="profile" onClick={handleProfileClick}>
-          <div className="avatar">ZU</div>
-          <p className="username">USERID</p>
+          <div className="avatar">
+            {userName.charAt(0).toUpperCase()}
+          </div>
+
+          <p className="username">
+            {userName}
+          </p>
         </div>
       </div>
     </div>

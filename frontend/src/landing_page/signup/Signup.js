@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+
 
 function Signup() {
     const [name, setName] = useState("");
@@ -23,6 +22,7 @@ function Signup() {
             setName("");
             setEmail("");
             setPassword("");
+            window.location.href = "/login";
 
         } catch (err) {
             alert(err.response?.data?.message || "Something went wrong!");

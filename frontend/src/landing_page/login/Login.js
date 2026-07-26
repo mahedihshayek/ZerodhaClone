@@ -18,11 +18,14 @@ function Login() {
             alert(res.data.message);
 
             localStorage.setItem("token", res.data.token);
+            localStorage.setItem("username", res.data.user.name);
+
 
             setEmail("");
             setPassword("");
 
-            window.location.href = `http://localhost:3001?token=${res.data.token}`;
+            window.location.href =
+                `http://localhost:3001?token=${res.data.token}&name=${encodeURIComponent(res.data.user.name)}`;
 
         } catch (err) {
             alert(err.response?.data?.message || err.message);
