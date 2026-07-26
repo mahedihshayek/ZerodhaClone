@@ -22,7 +22,7 @@ function Login() {
             setEmail("");
             setPassword("");
 
-            window.location.href = "http://localhost:3001";
+            window.location.href = `http://localhost:3001?token=${res.data.token}`;
 
         } catch (err) {
             alert(err.response?.data?.message || err.message);

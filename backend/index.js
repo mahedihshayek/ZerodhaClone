@@ -11,6 +11,8 @@ const jwt = require("jsonwebtoken");
 
 const cookieParser = require("cookie-parser");
 
+const verifyToken = require("./middleware/auth");
+
 const { HoldingsModel } = require("./model/HoldingsModel");
 const { PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
@@ -26,12 +28,12 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-app.get('/allHoldings', async (req, res) => {
+app.get('/allHoldings', verifyToken, async (req, res) => {
     let allHoldings = await HoldingsModel.find({});
     res.send(allHoldings);
 });
 
-app.get('/allPositions', async (req, res) => {
+app.get('/allPositions', verifyToken, async (req, res) => {
     let allPositions = await PositionsModel.find({});
     res.send(allPositions);
 });

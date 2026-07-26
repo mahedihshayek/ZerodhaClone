@@ -6,11 +6,28 @@ import axios, { all } from "axios";
 const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);
 
+  // useEffect(() => {
+  //   axios.get("http://localhost:3002/allPositions").then((res) => {
+  //     console.log(res.data);
+  //     setAllPositions(res.data);
+  //   });
+  // }, []);
   useEffect(() => {
-    axios.get("http://localhost:3002/allPositions").then((res) => {
-      console.log(res.data);
-      setAllPositions(res.data);
-    });
+
+    const token = localStorage.getItem("token");
+
+    axios.get("http://localhost:3002/allPositions", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+      .then((res) => {
+        setAllPositions(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
   }, []);
   return (
     <>

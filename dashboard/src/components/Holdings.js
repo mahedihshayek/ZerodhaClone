@@ -7,11 +7,30 @@ import { VerticalGraph } from "./VerticalGraph";
 const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
+  // useEffect(() => {
+  //   axios.get("http://localhost:3002/allHoldings").then((res) => {
+  //     console.log(res.data);
+  //     setAllHoldings(res.data);
+  //   });
+  // }, []);
+
   useEffect(() => {
-    axios.get("http://localhost:3002/allHoldings").then((res) => {
-      console.log(res.data);
-      setAllHoldings(res.data);
-    });
+
+    const token = localStorage.getItem("token");
+
+    axios.get("http://localhost:3002/allHoldings", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+      .then((res) => {
+        console.log(res.data);
+        setAllHoldings(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
   }, []);
 
   // const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
