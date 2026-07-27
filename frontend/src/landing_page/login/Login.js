@@ -9,7 +9,7 @@ function Login() {
         e.preventDefault();
 
         try {
-            const res = await axios.post("http://localhost:3002/login",
+            const res = await axios.post("https://zerodhaclone-woxs.onrender.com/login",
                 {
                     email,
                     password,
@@ -25,7 +25,7 @@ function Login() {
             setPassword("");
 
             window.location.href =
-                `http://localhost:3001?token=${res.data.token}&name=${encodeURIComponent(res.data.user.name)}`;
+                `https://zerodha-clone-omega-liard.vercel.app/?token=${res.data.token}&name=${encodeURIComponent(res.data.user.name)}`;
 
         } catch (err) {
             alert(err.response?.data?.message || err.message);

@@ -40,7 +40,7 @@ app.get('/allPositions', verifyToken, async (req, res) => {
 
 app.get('/allUsers', async (req, res) => {
     let allUsers = await UsersModel.find({});
-    res.send(allPositions);
+    res.send(allUsers);
 });
 
 

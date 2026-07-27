@@ -17,7 +17,7 @@ const Menu = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("userName");
 
-    window.location.href = "http://localhost:3000/login";
+    window.location.href = "https://zerodha-clone-omega-liard.vercel.app/login";
   };
 
   const menuClass = "menu";
