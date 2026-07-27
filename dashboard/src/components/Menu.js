@@ -26,16 +26,20 @@ const Menu = () => {
   const [userName, setUserName] = useState("USER");
 
   useEffect(() => {
-    const name = localStorage.getItem("username");
+    const params = new URLSearchParams(window.location.search);
+    const urlName = params.get("name");
+
+    const name = urlName || localStorage.getItem("username");
 
     if (name) {
       setUserName(name);
+      localStorage.setItem("username", name);
     }
   }, []);
 
   return (
     <div className="menu-container">
-      <img src="logo.png" style={{ width: "50px" }} alt="img"/>
+      <img src="logo.png" style={{ width: "50px" }} alt="img" />
       <div className="menus">
         <ul>
           <li>
