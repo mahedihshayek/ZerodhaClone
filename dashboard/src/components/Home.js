@@ -16,7 +16,7 @@ const Home = () => {
         }
 
         if (name) {
-            localStorage.setItem("userName", name);
+            localStorage.setItem("username", name);
         }
 
         if (token || name) {
