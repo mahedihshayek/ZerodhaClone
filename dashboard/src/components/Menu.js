@@ -15,7 +15,7 @@ const Menu = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    localStorage.removeItem("userName");
+    localStorage.removeItem("username");
 
     window.location.href = "https://zerodha-clone-omega-liard.vercel.app/login";
   };
@@ -26,7 +26,7 @@ const Menu = () => {
   const [userName, setUserName] = useState("USER");
 
   useEffect(() => {
-    const name = localStorage.getItem("userName");
+    const name = localStorage.getItem("username");
 
     if (name) {
       setUserName(name);
@@ -35,7 +35,7 @@ const Menu = () => {
 
   return (
     <div className="menu-container">
-      <img src="logo.png" style={{ width: "50px" }} />
+      <img src="logo.png" style={{ width: "50px" }} alt="img"/>
       <div className="menus">
         <ul>
           <li>
