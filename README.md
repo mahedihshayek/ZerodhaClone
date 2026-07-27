@@ -332,17 +332,6 @@ This project helped me gain practical experience with:
 - CI/CD pipeline
 - Improved analytics system
 
----
-
-# 📸 Screenshots
-
-(Add screenshots of:)
-
-- Landing page
-- Login/signup page
-- Dashboard
-- Holdings page
-- Positions page
 
 ---
 
